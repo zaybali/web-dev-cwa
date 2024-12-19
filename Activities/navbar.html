@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbars</title>
+  <style>
+    header {
+      margin-bottom: 30px;
+    }
+
+    header nav ul,
+    aside nav ul {
+      display: flex;
+      background-color: #333;
+      gap: 16px;
+      list-style: none;
+      margin: 0;
+      padding: 4px 16px;
+    }
+
+    header nav ul {
+      height: 40px;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .header-nav-links,
+    .vertical-nav-links {
+      color: white;
+      text-decoration: none;
+    }
+
+    .header-nav-links:hover,
+    .vertical-nav-links:hover {
+      text-decoration: underline;
+    }
+
+    aside nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home" class="header-nav-links">Home</a></li>
+        <li><a href="#about" class="header-nav-links">About</a></li>
+        <li><a href="#portfolio" class="header-nav-links">Portfolio</a></li>
+        <li><a href="#contact" class="header-nav-links">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <aside>
+    <nav>
+      <ul>
+        <li><a href="#home" class="vertical-nav-links">Home</a></li>
+        <li><a href="#about" class="vertical-nav-links">About</a></li>
+        <li><a href="#portfolio" class="vertical-nav-links">Portfolio</a></li>
+        <li><a href="#contact" class="vertical-nav-links">Contact</a></li>
+      </ul>
+    </nav>
+  </aside>
+</body>
+
+</html>
