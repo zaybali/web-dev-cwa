@@ -16,10 +16,20 @@ header{
 
 .main-header-title {
   color: white;
-  font-size: 24px
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.hero {
+  margin-top: 30px;
+  text-align: center;
 }
 
 .hero img {
   width: 150px;
   height: 150px;
+}
+
+.information {
+  text-align: center;
 }
