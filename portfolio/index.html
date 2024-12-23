@@ -20,10 +20,10 @@
   <header>
     <span class="main-header-title">Zaib Ali</span>
   </header>
-  <section class="hero">
+  <section class="hero animate">
     <img src="images/profilePic.jpg" alt="profilePic">
   </section>
-  <section class="information">
+  <section class="information animate">
     <h2>Hi, My Name is Zaib Ali.</h2>
     <p>I am a Web Developer with the following skills:</p>
     <ul class="skills">
@@ -35,7 +35,7 @@
       <li>MongoDb</li>
     </ul>
   </section>
-  <section class="projects">
+  <section class="projects animate">
     <h2 class="projects-title">My Projects</h2> <!-- Added title for projects section -->
     <div class="project-item">
       <h3>Next.js Product Filter App</h3>
@@ -55,19 +55,34 @@
       <a href="https://foodpanda-clone-zaybali.vercel.app/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
     </div>
   </section>
-  <section class="cta">
+  <section class="cta animate">
     <h2>Contact Me</h2>
     <p>If you have any project in mind or want to collaborate, feel free to reach out!</p>
     <a href="mailto:zaibali51@live.com" class="cta-button">Get in Touch</a>
     <a target="_blank" href="https://www.linkedin.com/in/iamzaibali/" class="cta-button">Let’s connect – DM me!</a>
   </section>
-  <footer>
+  <footer class="animate">
     <a href="https://github.com/zaybali"><i class="fa-brands fa-github"></i></a>
     <a href="https://www.linkedin.com/in/iamzaibali/"><i class="fa-brands fa-linkedin"></i></a>
     <a href="https://www.facebook.com/iamzaibali"><i class="fa-brands fa-facebook"></i></a>
     <a href="mailto:zaibali51@live.com"><i class="fa-regular fa-envelope"></i></a>
     <p>CopyRight &copy; 2025 Zaib Ali</p>
   </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      });
+
+      document.querySelectorAll('.animate').forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
 </body>
 
 </html>
