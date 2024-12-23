@@ -88,6 +88,14 @@ section {
   flex: 1; /* Allow projects section to grow */
 }
 
+.projects-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #3b3b98; /* Match the theme color */
+  width: 100%; /* Ensure it takes full width */
+  text-align: center; /* Center align the title */
+}
+
 .projects .project-item {
   margin: 0 auto;
   border: 1px solid #dcdcdc;
@@ -122,7 +130,7 @@ footer {
   border-top: 1px solid #dcdcdc;
   padding: 16px;
   text-align: center;
-  background: #444; 
+  background: #f6f6f6;
   color: white;
 }
 
@@ -130,6 +138,10 @@ footer a {
   margin-left: 16px;
   color: white;
   transition: color 0.3s;
+}
+
+footer p {
+  color: #333;
 }
 
 footer a:hover {
