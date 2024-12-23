@@ -126,6 +126,39 @@ section {
   font-size: 24px;
 }
 
+.cta {
+  text-align: center;
+  padding: 40px 16px;
+  background: #3b3b98; /* Match the theme color */
+  color: white;
+}
+
+.cta h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 18px;
+  color: #3b3b98;
+  background: white;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+.cta-button:hover {
+  background: #dcdcdc;
+  color: #3b3b98;
+}
+
 footer {
   border-top: 1px solid #dcdcdc;
   padding: 16px;
@@ -162,4 +195,8 @@ footer i {
 
 .fa-facebook {
   color: #1877f2;
+}
+
+.fa-envelope {
+  color: #333;
 }
