@@ -5,13 +5,27 @@
 html, body {
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  height: 100%; /* Ensure the body and html take full height */
 }
 
-header{
-  background: #6363ed;
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: #3b3b98; /* Updated color */
   height: 64px;
   padding-top: 16px;
   padding-left: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  padding: 0 16px;
 }
 
 .main-header-title {
@@ -28,8 +42,113 @@ header{
 .hero img {
   width: 150px;
   height: 150px;
+  border-radius: 50%;
+  border: 4px solid #3b3b98; /* Updated color */
 }
 
 .information {
   text-align: center;
+  margin-top: 20px;
+}
+
+.information h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.information p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.skills {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skills li {
+  display: inline-block;
+  margin: 4px;
+  font-size: 16px;
+  background: #3b3b98; /* Updated color */
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.projects {
+  text-align: center;
+  margin-top: 40px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 1; /* Allow projects section to grow */
+}
+
+.projects .project-item {
+  margin: 0 auto;
+  border: 1px solid #dcdcdc;
+  width: 250px;
+  min-width: 150px;
+  padding: 16px;
+  border-radius: 4px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projects .project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-item h3 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+.project-item a {
+  color: #3b3b98; /* Updated color */
+  text-decoration: none;
+  font-size: 24px;
+}
+
+footer {
+  border-top: 1px solid #dcdcdc;
+  padding: 16px;
+  text-align: center;
+  background: #444; /* Updated color */
+  color: white;
+}
+
+footer a {
+  margin-left: 16px;
+  color: white;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #dcdcdc;
+}
+
+footer i {
+  font-size: 24px;
+}
+
+.fa-github {
+  color: #171515;
+}
+
+.fa-linkedin {
+  color: #0a66c2;
+}
+
+.fa-facebook {
+  color: #1877f2;
 }
