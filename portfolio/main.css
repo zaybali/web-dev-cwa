@@ -66,6 +66,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 0;
 }
 
 .skills li {
@@ -131,6 +132,7 @@ section {
   padding: 40px 16px;
   background: #3b3b98; /* Match the theme color */
   color: white;
+  margin-top: 40px;
 }
 
 .cta h2 {
