@@ -92,15 +92,15 @@ section {
 .projects-title {
   font-size: 32px;
   margin-bottom: 20px;
-  color: #3b3b98; /* Match the theme color */
-  width: 100%; /* Ensure it takes full width */
-  text-align: center; /* Center align the title */
+  color: #3b3b98; 
+  width: 100%; 
+  text-align: center;
 }
 
 .projects .project-item {
   margin: 0 auto;
   border: 1px solid #dcdcdc;
-  width: 250px;
+  width: 280px;
   min-width: 150px;
   padding: 16px;
   border-radius: 4px;
