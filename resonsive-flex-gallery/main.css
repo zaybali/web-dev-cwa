@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+.main-heading {
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  width: 25%;
+  flex: 25%;
+  padding:4px;
+}
+
+.column img {
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 4px;
+  transition: transform .4s ease-out;
+}
+
+.column img:hover {
+  transform: scale(1.1);
+}
+
+@media all and (max-width: 960px) {
+  .column {
+    width: 50%;
+    flex: 50%;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .column {
+    width: 100%;
+    flex: 100%;
+  }
+}
