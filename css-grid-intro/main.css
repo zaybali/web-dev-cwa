@@ -1,14 +1,14 @@
-main {
+#mainSection {
   display: grid;
+  text-align: center;
   grid-template-areas:
     'header header header header header header'
     'aside aside left left right right'
     'aside aside footer footer footer footer';
 }
-main > * {
+#mainSection > *, .box {
   border: 1px solid red;
   padding: 20px;
-  margin: 2px
 }
 
 header {
@@ -29,4 +29,18 @@ aside {
 
 footer {
   grid-area: footer;
+}
+
+#boxSection {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* gap: 20px */
+}
+
+.box:first-child {
+  /* grid-column-start: 1;
+  grid-column-end: 3; */
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
