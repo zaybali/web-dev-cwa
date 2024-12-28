@@ -20,6 +20,7 @@ section {
   display: grid;
   grid-template-columns: 8fr 4fr;
   margin-top: 124px;
+  gap: 98px;
 }
 
 .hero-section__content h1{
@@ -28,7 +29,8 @@ section {
   font-size: 58px;
   line-height: 70px;
   color: var(--primary-color);
-  letter-spacing: -1px
+  letter-spacing: -1px;
+  margin-bottom: 10px;
 }
 
 .hero-section__content p {
@@ -48,6 +50,7 @@ section {
 .hero-section__content__discount-btn {
   background-color: var(--action-primary);
   color: white;
+  margin-top: 60px;
   padding: 16px 32px;
   border-radius: 100px;
   border: none;
