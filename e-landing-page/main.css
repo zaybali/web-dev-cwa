@@ -1,6 +1,7 @@
 :root {
   --primary-color: #1E0E62;
   --text-light: rgba(21, 20, 57, 0.4);
+  --action-primary: #25DAC5;
 }
 
 * {
@@ -42,4 +43,16 @@ section {
   max-width: 370px;
   border-radius: 4px;
   margin: 0 auto;
+}
+
+.hero-section__content__discount-btn {
+  background-color: var(--action-primary);
+  color: white;
+  padding: 16px 32px;
+  border-radius: 100px;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
 }
