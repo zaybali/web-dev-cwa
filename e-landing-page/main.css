@@ -1,5 +1,45 @@
+:root {
+  --primary-color: #1E0E62;
+  --text-light: rgba(21, 20, 57, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+section {
+  margin: 0 216px;
+}
+
+.hero-section {
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+  margin-top: 124px;
+}
+
+.hero-section__content h1{
+  font-style: normal;
+  font-weight: 700;
+  font-size: 58px;
+  line-height: 70px;
+  color: var(--primary-color);
+  letter-spacing: -1px
+}
+
+.hero-section__content p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16x;
+  line-height: 26px;
+  color: var(--text-light);
+}
 
 .hero-section__image img {
-  width: 370px;
+  max-width: 370px;
   border-radius: 4px;
+  margin: 0 auto;
 }
