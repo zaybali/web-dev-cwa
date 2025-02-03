@@ -81,12 +81,58 @@ const render = () => {
 }
 
 const calculateWinner = () => {
+  const allMoves = [comp1.move, comp2.move, player1.move];
+  const allMovesAreFront = allMoves.every(move => {
+    return move === MOVES.FRONT
+  });
+  const allMovesAreBack = allMoves.every(move => {
+    return move === MOVES.BACK
+  });
 
+  if (allMovesAreFront || allMovesAreBack) {
+    alert('No one wins');
+    return;
+  }
+  const results = {
+    FRONT: [],
+    BACK: []
+  }
+
+  allMoves.forEach((move, index) => {
+    console.log(move, index);
+    if (move === MOVES.FRONT) {
+      results.FRONT.push(index);
+    } else {
+      results.BACK.push(index);
+    }
+  })
+
+  if (results.BACK.length === 1) {
+    // Winner move is back
+    announceWinner(MOVES.BACK, ['Computer 1', 'Computer 2', ' Player 1'], results.BACK[0]);
+  } else {
+    // winner move is front
+    announceWinner(MOVES.FRONT, ['Computer 1', 'Computer 2', ' Player 1'], results.FRONT[0]);
+  }
+}
+
+const announceWinner = (move, players, index) => {
+  const message = `${players[index]} wins with ${move} move`;
+  alert(message);
 }
 
 const main = () => {
   calculateMoves();
   render();
+  setTimeout(() => {
+    calculateWinner();
+    setTimeout(() => {
+      const again = confirm('Do you want to play again?');
+      if (again) {
+        main();
+      }
+    }, 500);
+  }, 2000);
 }
 
 main();
