@@ -1,0 +1,30 @@
+html, body {
+  font-family: 'nunito', sans-serif;
+}
+
+.player {
+  width: 200px;
+}
+
+#gameSection {
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+#gameSection .players-row  {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+#gameSection .players-row:nth-child(2) {
+  justify-content: center;
+}
+
+#comp1 {
+  transform: rotate(135deg);
+}
+
+#comp2 {
+  transform: rotate(215deg);
+}
