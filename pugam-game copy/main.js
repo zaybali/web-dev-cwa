@@ -32,7 +32,18 @@ const player1 = {
 
 const calculateMoves = () => {
   const moves = [MOVES.FRONT, MOVES.BACK];
+
+  // computer moves
   comp1.MOVE = moves[getRandomIndex()];
+  comp2.MOVE = moves[getRandomIndex()];
+
+  // player move
+  player1.MOVE = prompt('Enter your move: front or back');
+
+  if (player1.MOVE === null) {
+    alert('invalid move');
+    throw new Error('invalid move');
+  }
 }
 
 const getRandomIndex = () => {
@@ -40,7 +51,7 @@ const getRandomIndex = () => {
 }
 
 const main = () => {
-
+  calculateMoves()
 }
 
 main();
