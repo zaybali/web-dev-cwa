@@ -40,7 +40,7 @@ const calculateMoves = () => {
   // player move
   const userMove = prompt('Enter your move: front or back');
 
-  if (player1.MOVE === null) {
+  if (userMove === null) {
     alert('invalid move');
     throw new Error('invalid move');
   }
@@ -52,12 +52,38 @@ const calculateMoves = () => {
   player1.MOVE = userMove;
 }
 
+const render = () => {
+  const comp1Img = document.getElementById('comp1');
+  const comp2Img = document.getElementById('comp2');
+  const player1Img = document.getElementById('player1');
+  console.log(comp1Img, comp2Img, player1Img);
+
+  if (comp1.MOVE === MOVES.FRONT) {
+    comp1Img.src = MOVES_SOURCES.FRONT;
+  } else {
+    comp1Img.src = MOVES_SOURCES.BACK;
+  }
+
+  if (comp2.MOVE === MOVES.FRONT) {
+    comp2Img.src = MOVES_SOURCES.FRONT;
+  } else {
+    comp2Img.src = MOVES_SOURCES.BACK;
+  }
+
+  if (player1.MOVE === MOVES.FRONT) {
+    player1Img.src = MOVES_SOURCES.FRONT;
+  } else {
+    player1Img.src = MOVES_SOURCES.BACK;
+  }
+}
+
 const getRandomIndex = () => {
   return Math.random() > 0.5 ? 1 : 0;
 }
 
 const main = () => {
   calculateMoves()
+  render()
 }
 
 main();
