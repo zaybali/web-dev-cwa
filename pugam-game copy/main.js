@@ -124,7 +124,15 @@ const announceWinner = (move, players, index) => {
 const main = () => {
   calculateMoves()
   render()
-  calculateWinner()
+  setTimeout(() => {
+    calculateWinner()
+    setTimeout(() => {
+      const again = prompt('Play Again?');
+      if (again) {
+        main();
+      }
+    }, 500)
+  }, 1000)
 }
 
 main();
