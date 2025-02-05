@@ -52,6 +52,11 @@ const calculateMoves = () => {
   player1.MOVE = userMove;
 }
 
+const getRandomIndex = () => {
+  return Math.random() > 0.5 ? 1 : 0;
+}
+
+
 const render = () => {
   const comp1Img = document.getElementById('comp1');
   const comp2Img = document.getElementById('comp2');
@@ -77,13 +82,49 @@ const render = () => {
   }
 }
 
-const getRandomIndex = () => {
-  return Math.random() > 0.5 ? 1 : 0;
+const calculateWinner = () => {
+  const allMoves = [comp1.MOVE, comp2.MOVE, player1.MOVE];
+  const allMovesAreFront = allMoves.every((move) => {
+    return move === MOVES.FRONT;
+  });
+  const allMovesAreBack = allMoves.every((move) => {
+    return move === MOVES.BACK;
+  });
+  if (allMovesAreFront || allMovesAreBack) {
+    alert('no one wins');
+    return;
+  }
+
+  const result = {
+    FRONT: [],
+    BACK: []
+  }
+
+  allMoves.forEach((move, index) => {
+    console.log(move, index);
+    if (move === MOVES.FRONT) {
+      result.FRONT.push(index);
+    } else {
+      result.BACK.push(index);
+    }
+  });
+
+  if (result.BACK.length === 1) {
+    announceWinner(MOVES.BACK, ['Computer 1', 'Computer 2', 'Player 1'], result.BACK[0])
+  } else {
+    announceWinner(MOVES.FRONT, ['Computer 1', 'Computer 2', 'Player 1'], result.FRONT[0]);
+  }
+}
+
+const announceWinner = (move, players, index) => {
+  const message = `${players[index]} is the winner with ${move} move`;
+  alert(message);
 }
 
 const main = () => {
   calculateMoves()
   render()
+  calculateWinner()
 }
 
 main();
