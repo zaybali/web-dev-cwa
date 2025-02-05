@@ -44,6 +44,12 @@ const calculateMoves = () => {
     alert('invalid move');
     throw new Error('invalid move');
   }
+
+  if (player1.MOVE !== moves[0] && player1.MOVE !== moves[1]) {
+    alert('invalid move, please enter front or back');
+    throw new Error('invalid move, please enter front or back');
+  }
+
 }
 
 const getRandomIndex = () => {
